@@ -1,7 +1,25 @@
-// Sticky header
+// sticky header 
+
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.sticky-header');
-    header.classList.toggle('scrolled', window.scrollY > 0);
+    const scrollPosition = window.scrollY;
+    const heroSection = document.querySelector('.hero-section');
+    const heroHeight = heroSection.offsetHeight;
+    
+    if (scrollPosition > 50) {
+        header.classList.add('scrolled');
+        document.body.style.backgroundColor = '#ffffff';
+    } else {
+        header.classList.remove('scrolled');
+        document.body.style.backgroundColor = '';
+    }
+
+    // Gradually change background color as you scroll past the hero section
+    if (scrollPosition < heroHeight) {
+        const progress = scrollPosition / heroHeight;
+        const color = `rgb(${Math.round(255 * progress)}, ${Math.round(255 * progress)}, ${Math.round(255 * progress)})`;
+        document.body.style.backgroundColor = color;
+    }
 });
 
 // Smooth scrolling for navigation links
@@ -40,8 +58,6 @@ window.addEventListener('scroll', () => {
     let scrollPosition = window.pageYOffset;
     parallax.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
 });
-
-
 
 // Handle form submission
 document.querySelector('.contact-form').addEventListener('submit', function(e) {

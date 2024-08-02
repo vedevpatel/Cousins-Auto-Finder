@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cousins Auto Finder</title>
+    <meta name="description" content="Cousins Auto Finder helps you find the best auto deals across the USA. One email is all it takes to start your car buying journey.">
+    <title>Cousins Auto Finder - Find Your Dream Car</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="sticky-header">
-        <img src="Cousins Auto Finder Logo.jpg" alt="Cousins Auto Finder Logo" class="logo">
+        <img src="Cousins Auto Finder Logo.jpg" alt="Cousins Auto Finder Logo" class="logo" width="150" height="50">
         <nav>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -22,18 +25,18 @@
 
     <main>
         <section id="home" class="hero-section parallax">
-            <h1 class="hero-title">Find the best auto deals in the country</h1>
+            <h1 class="hero-title">Find the best auto deals in the country.</h1>
             <h2 class="hero-subtitle">With. Just. <span class="highlight">One.</span> Email.</h2>
-            <a href="#services" class="cta-button">Learn More</a>
+            <a href="#services" class="cta-button">Discover Our Services</a>
         </section>
 
-        <section id="about" class="about-section">
+        <section id="about" class="about-section fade-in">
             <h2 class="section-title">About Us</h2>
             <p class="section-text">Based in multiple locations in the USA, we scan the whole auto market to find the deal YOU need, as per YOUR specifications.</p>
             <p class="section-text">Founded by two cousins (Yes, we are actually cousins), we have always loved cars. Knowing the vastness of the car market and previously struggling to find good deals on vehicles, we teamed up to make it a vision to find EVERYONE the best deals.</p>
         </section>
 
-        <section id="services" class="services-section">
+        <section id="services" class="services-section fade-in">
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-item">
@@ -49,11 +52,39 @@
                     <p>We provide detailed market analysis to ensure you're getting the best deal possible.</p>
                 </div>
             </div>
-        </section> 
+        </section>
 
-        <section id="contact" class="contact-section">
+        <section id="testimonials" class="testimonials-section fade-in">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <p>"Cousins Auto Finder saved me time and money. I found my dream car within a week!"</p>
+                    <p class="testimonial-author">- John D.</p>
+                </div>
+                <div class="testimonial-item">
+                    <p>"The personalized service was outstanding. They really understood what I was looking for."</p>
+                    <p class="testimonial-author">- Sarah M.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section fade-in">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How does your service work?</h3>
+                    <p>We take your car preferences and budget, then search nationwide databases to find the best matches for you.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How much does it cost?</h3>
+                    <p>Our basic search service is free. We offer premium services for more comprehensive assistance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section fade-in">
             <h2 class="section-title">Get in Touch</h2>
-            <p class="contact-info">Call us: <a href="tel:+1234567890">+1 (408) 581-2591</a></p>
+            <p class="contact-info">Call us: <a href="tel:+14085812591">+1 (408) 581-2591</a></p>
             <form class="contact-form" action="submit_form.php" method="POST">
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="email" placeholder="Email" required>
@@ -63,13 +94,10 @@
             </form>
             <div id="form-status"></div>
         </section>
-
-        
-        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Cousins Auto Finder</p>
+        <p>&copy; 2024 Cousins Auto Finder | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
     </footer>
 
     <script src="script.js"></script>
