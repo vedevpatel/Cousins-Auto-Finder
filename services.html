@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Cousins Auto Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="Cousins Auto Finder Logo.jpg" alt="Cousins Auto Finder Logo" class="logo">
+        <nav>
+            <div class="menu-bar" onclick="toggleMenu()">☰ Menu</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <ul class="side-menu" id="sideMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="services-section">
+            <h2 class="services-title">Our Services</h2>
+            <div class="service-item">
+                <h3>Car Deal Scouting</h3>
+                <p>We search through thousands of listings to find the best deals that match your preferences and budget.</p>
+            </div>
+            <div class="service-item">
+                <h3>Personalized Assistance</h3>
+                <p>Our team provides one-on-one assistance to help you navigate the car buying process with ease.</p>
+            </div>
+            <div class="service-item">
+                <h3>Market Analysis</h3>
+                <p>We provide detailed market analysis to ensure you're getting the best deal possible.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cousins Auto Finder</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            if (sideMenu.style.display === 'block' || sideMenu.style.display === '') {
+                sideMenu.style.display = 'none';
+            } else {
+                sideMenu.style.display = 'block';
+            }
+        }
+        
+        // Initialize side menu display state
+        document.addEventListener('DOMContentLoaded', function() {
+            const sideMenu = document.getElementById('sideMenu');
+            sideMenu.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

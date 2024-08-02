@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cousins Auto Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - Cousins Auto Finder</title>
+        <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="Cousins Auto Finder Logo.jpg" alt="Cousins Auto Finder Logo" class="logo">
+            <nav>
+                <div class="menu-bar" onclick="toggleMenu()">☰ Menu</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <ul class="side-menu" id="sideMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="about-section fade-in">
+                <h2 class="about-title">What do we do?</h2>
+                <p class="about-text">
+                    Based in multiple locations in the USA, we scan the whole auto market to find the deal YOU need, as per YOUR specifications.
+                </p>
+                <h3 class="about-title">Who are we?</h3>
+                <p class="about-us">
+                    Founded by two cousins (Yes, we are actually cousins), we have always loved cars. Knowing the vastness of the car market and previously struggling to find good deals on vehicles, we teamed up to make it a vision to find EVERYONE the best deals.
+                </p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Cousins Auto Finder</p>
+        </footer>
+        <script>
+            function toggleMenu() {
+                const sideMenu = document.getElementById('sideMenu');
+                if (sideMenu.style.display === 'block' || sideMenu.style.display === '') {
+                    sideMenu.style.display = 'none';
+                } else {
+                    sideMenu.style.display = 'block';
+                }
+            }
+    
+            document.addEventListener('DOMContentLoaded', function() {
+                const sideMenu = document.getElementById('sideMenu');
+                sideMenu.style.display = 'none';
+    
+                const fadeIns = document.querySelectorAll('.fade-in');
+                const options = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -10% 0px'
+                };
+    
+                const observer = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, options);
+    
+                fadeIns.forEach(fadeIn => {
+                    observer.observe(fadeIn);
+                });
+            });
+        </script>
+    </body>
+    </html>
+    
